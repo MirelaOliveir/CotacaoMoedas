@@ -1,0 +1,237 @@
+@use 'vars'
+@use 'mixins'
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&family=Josefin+Sans:ital,wght@0,200;0,300;0,400;1,700&display=swap')
+
+// font-family: 'Comfortaa', cursive;
+// font-family: 'Josefin Sans', sans-serif;
+
+*
+    padding: 0
+    margin: 0
+    text-decoration: none
+    list-style-type: none
+    box-sizing: border-box
+
+body
+    height: 100vh
+    font-family: 'Josefin Sans', sans-serif
+    background-color: vars.$back
+    color: vars.$white
+
+.container
+    max-width: 1200px
+    width: 100%
+    display: flex
+    margin: 0 auto
+    align-itens: center
+    flex-direction: column
+    padding: 0 6rem
+
+    @include mixins.tablet2
+        padding: 0 3rem
+
+h1
+    margin-top: 3rem 
+    font-size: 2rem
+    color: vars.$greish
+    font-family:  'Comfortaa', cursive
+    letter-spacing: .1rem
+
+//form
+
+form
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    margin-top: 4rem
+    width: 70%
+    height: fit-content
+
+    @include mixins.tablet
+        width: 87%  
+
+    @include mixins.tablet2
+        width: 95%  
+
+    @include mixins.tablet3
+        flex-wrap: wrap
+
+    @include mixins.tablet4
+        justify-content: flex-start
+        width: 60%
+
+    @include mixins.tablet5
+        width: 78%
+
+    @include mixins.tablet6
+        width: 100%
+         
+        
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button 
+        -webkit-appearance: none
+        margin: 0
+
+    input[type=number]
+        -moz-appearance: textfield
+
+    label
+        font-size: 1.2rem
+        font-weight: 300
+        display: block
+        margin: 0 0 .3rem .2rem
+
+    input, select, button
+        border-radius: .5rem
+        padding: .5rem
+        height: 2.2rem
+        width: 7rem
+        font-size: 1rem
+        font-weight: 600
+        font-family: 'Josefin Sans', sans-serif
+        border: none
+        display: block
+        margin-top: .5rem
+    
+    input
+        box-shadow: inset .1rem .1rem .2rem vars.$animation-color-two
+
+    select, button
+        height: fit-content
+        width: fit-content
+        cursor: pointer
+
+    #switch
+        background-color: vars.$greish
+        border: 2px solid vars.$greish
+        transition: all .4s ease
+        margin: 0 2rem
+
+        @include mixins.tablet3
+            margin: 0 1rem 
+
+        &:hover
+            background-color: vars.$back
+            color: vars.$greish
+            box-shadow: 0 0 1rem #0c0620
+    
+    #calc
+        background-color: vars.$laranja
+        border: 2px solid vars.$laranja
+        transition: all .4s ease
+
+        &:hover
+            background-color: vars.$back
+            color: vars.$laranja
+
+// End of Form
+
+.card
+    display: grid
+    grid-template-columns: 1fr 1fr
+    margin: 5rem auto 0 auto
+    gap: 3rem
+    width: 100%
+    position: relative
+
+    @include mixins.tablet3
+        gap: 2rem 
+
+    @include mixins.tablet4
+        grid-template-columns: 1fr
+
+    &::before
+        content: ''
+        background-color: #5d4675a0
+        position: absolute
+        height: 90vh
+        width: 3px
+        left: -4rem
+        top: -16rem
+
+        @include mixins.tablet2
+            left: -2rem
+        
+        @include mixins.tablet4
+            top: -18rem
+            height: 108vh
+
+    &-back
+        width: 100%
+        max-width: 500px
+        height: 18rem
+        background-color: vars.$card-back
+        border-radius: 2.4rem
+        display: flex
+        align-items: center
+        justify-content: center
+        box-shadow: .2rem .2rem 1rem #0a041ea3
+    
+    &-front
+        width: 96%
+        border: 2px solid #fff
+        height: 95%
+        border-radius: 2rem
+        animation: border-colors 2.5s infinite
+        box-shadow: vars.$box-shadow
+        padding: 1.5rem
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-direction: column
+        
+
+        h2
+            font-size: 1.5rem 
+            color: vars.$greish
+            font-size: 1.8rem
+        h3
+            font-size: 3.3rem
+    
+    @keyframes border-colors
+            0%,100%
+                border: 2px solid #9341f1
+            50%
+                border: 2px solid #eb1c80
+    
+
+.content-bottom
+    display: flex
+    width: 100%
+    justify-content: space-evenly
+    align-items: flex-end   
+    color: vars.$greish
+    font-weight: 100 
+
+    div
+        display: flex 
+
+        p
+            margin-left: 1rem
+
+    .circle-load
+        width: .8rem
+        height: .8rem
+        border-radius: 50%
+        border: 2px solid vars.$back
+        animation: loading 1s  infinite linear
+
+    @keyframes loading
+            0%
+                border-top: 2px solid #9341f1
+            50%
+                border-top: 2px solid #eb1c80
+            100%
+                border-top: 2px solid #9341f1
+                transform: rotate(360deg)
+
+
+            
+        
+
+        
+        
+
+       
+
