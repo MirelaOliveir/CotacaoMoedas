@@ -39,9 +39,7 @@ body {
 }
 @media (max-width: 780px) {
   .container {
-    min-height: none;
-    height: 100%;
-    background-color: red;
+    height: 100vh;
   }
 }
 
