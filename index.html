@@ -4,37 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="cotacao.mirelaoliveira.com">
+    <meta name="author" content="Mirela Oliveira">
+    <meta name="description" content="Confira a cotação do dolar e do euro em tempo real. Use a calculadora de conversão para converter valores entre moedas.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Cotação moedas</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
     
-    <header class="container">
-        <h1>Cotação atual</h1>
-    </header>
     <section class="container">
+        <header >
+            <h1>Cotação atual</h1>
+        </header>
         <form method="POST">
-            <div>
-                <label id="fromLabel" for="from">de:</label>
-                <input type="number" id="from" list="coins" >
+            <div class="flex">
+                <div>
+                    <label id="fromLabel" for="from">de:</label>
+                    <input type="number" id="from" list="coins" >
+                </div>
+                <select id="coins1">
+                    <option value="real">Real R$</option>
+                    <option value="dolar">Dolar $</option>
+                    <option value="euro">Euro &#8364</option>
+                </select>
+
+                <button id="switch"><i id="icon" class="fa-solid fa-repeat"></i></button>
             </div>
-            <select id="coins1">
-                <option value="real">Real R$</option>
-                <option value="dolar">Dolar $</option>
-                <option value="euro">Euro &#8364</option>
-            </select>
-            <button id="switch"><i id="icon" class="fa-solid fa-repeat"></i></button>
-            <div>
+            
+            
+
+            <div class="flex">
+                <div>
                 <label id="toLabel" for="to">para:</label>
-                <input type="number" id="to" list="coins" >
+                    <input type="number" id="to" list="coins" >
+                </div>
+                <select id="coins">
+                    <option value="dolar">Dolar $</option>
+                    <option value="euro">Euro &#8364</option>
+                    <option value="real">Real R$</option>
+                </select>
+                <button id="calc">CALCULAR</button>
             </div>
-            <select id="coins">
-                <option value="dolar">Dolar $</option>
-                <option value="euro">Euro &#8364</option>
-                <option value="real">Real R$</option>
-            </select>
-            <button id="calc">CALCULAR</button>
+            
         </form>
 
         <!-- cartoes -->
