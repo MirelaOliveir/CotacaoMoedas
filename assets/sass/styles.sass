@@ -31,16 +31,15 @@ body
     height: 100%
     display: flex
     margin: 0 auto
-    align-itens: center
     justify-content: space-evenly
     flex-direction: column
     padding: 0 6rem
-
+    
     @include mixins.tablet2
         padding: 0 3rem 3rem 3rem
 
     @include mixins.tablet3      
-        height: 100vh
+        min-height: 130vh
 
 h1
     font-size: 2rem
@@ -144,13 +143,13 @@ form
         height: 90vh
         width: 3px
         left: -4rem
-        top: -16rem
+        top: -13rem
 
         @include mixins.tablet2
             left: -2rem
         
         @include mixins.tablet4
-            top: -18rem
+            top: -16rem
             height: 108vh
 
     &-back

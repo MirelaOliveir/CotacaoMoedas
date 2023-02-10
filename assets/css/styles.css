@@ -27,7 +27,6 @@ body {
   height: 100%;
   display: flex;
   margin: 0 auto;
-  align-itens: center;
   justify-content: space-evenly;
   flex-direction: column;
   padding: 0 6rem;
@@ -39,7 +38,7 @@ body {
 }
 @media (max-width: 780px) {
   .container {
-    height: 100vh;
+    min-height: 130vh;
   }
 }
 
@@ -151,7 +150,7 @@ form #calc:hover {
   height: 90vh;
   width: 3px;
   left: -4rem;
-  top: -16rem;
+  top: -13rem;
 }
 @media (max-width: 950px) {
   .card::before {
@@ -160,7 +159,7 @@ form #calc:hover {
 }
 @media (max-width: 700px) {
   .card::before {
-    top: -18rem;
+    top: -16rem;
     height: 108vh;
   }
 }
